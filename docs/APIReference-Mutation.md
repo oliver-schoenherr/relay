@@ -275,8 +275,8 @@ Implement this required method to return a GraphQL mutation operation that repre
 class LikeStoryMutation extends Relay.Mutation {
   getMutation() {
     return this.props.story.viewerDoesLike
-      ? return Relay.QL`mutation {unlikeStory}`
-      : return Relay.QL`mutation {likeStory}`;
+      ? Relay.QL`mutation {unlikeStory}`
+      : Relay.QL`mutation {likeStory}`;
   }
 }
 ```
